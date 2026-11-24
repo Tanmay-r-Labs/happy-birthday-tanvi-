@@ -1,0 +1,23 @@
+[build]
+  publish = "."
+
+[build.environment]
+  NETLIFY_DRAWER = "false"
+  NETLIFY_FEEDBACK = "false"
+
+[context.production.environment]
+  NETLIFY_DRAWER = "false"
+  NETLIFY_FEEDBACK = "false"
+
+[context.deploy-preview.environment]
+  NETLIFY_DRAWER = "false"
+  NETLIFY_FEEDBACK = "false"
+
+[context.branch-deploy.environment]
+  NETLIFY_DRAWER = "false"
+  NETLIFY_FEEDBACK = "false"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
